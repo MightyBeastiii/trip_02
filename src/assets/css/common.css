@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #ff9854;
+  --van-primary-color: var(--primary-color);
+}
+.icon_check {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url(../img/detail/icon_check.png) 0 0 / 100% 100%;
+}
