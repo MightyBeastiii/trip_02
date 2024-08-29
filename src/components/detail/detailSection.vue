@@ -6,7 +6,7 @@ defineProps({
   },
   footer: {
     type: String,
-    default: '查询更多'
+    default: ''
   }
 })
 </script>
@@ -19,7 +19,7 @@ defineProps({
     <div class="content">
       <slot><span>默认内容</span></slot>
     </div>
-    <div class="footer">
+    <div class="footer" v-if="footer.length">
       {{ footer }}
       <van-icon name="arrow" />
     </div>

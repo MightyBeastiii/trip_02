@@ -7,6 +7,7 @@ import DetailTopInfos from './canps/detail_02-topinfos.vue'
 import DetailFacility from './canps/detail_03-facility.vue'
 import DetailLandlord from './canps/detail_04-landlord.vue'
 import DetailComment from './canps/detail_05-comment.vue'
+import DetailRules from './canps/detail_06-rules.vue'
 
 
 const route = useRoute()
@@ -31,6 +32,7 @@ const onClickLeft = () => {
       <detail-facility :house-facility="mainPart.dynamicModule.facilityModule.houseFacility"></detail-facility>
       <detail-landlord :landlord-infos="mainPart.dynamicModule.landlordModule"></detail-landlord>
       <detail-comment :comments-data="mainPart.dynamicModule.commentModule"></detail-comment>
+      <detail-rules :rules-module="mainPart.dynamicModule.rulesModule"></detail-rules>
     </div>
   </div>
 </template>

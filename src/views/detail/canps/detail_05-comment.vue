@@ -69,6 +69,8 @@ defineProps({
       align-items: center;
 
       .overall {
+        display: flex;
+        justify-content: center;
         width: 65px;
         height: 100%;
         color: #333;
@@ -77,22 +79,10 @@ defineProps({
         font-size: 48px;
         position: relative;
         z-index: 9;
-
-        
-
-        // .line {
-        //   width: 66px;
-        //   height: 6px;
-        //   background: linear-gradient(90deg, #fa8c1d, #fcaf3f);
-        //   border-radius: 3px;
-        //   position: absolute;
-        //   bottom: 6px;
-        //   z-index: 5;
-        // }
       }
 
       .info {
-        margin-left: 19px;
+        margin-left: 15px;
         font-size: 12px;
         color: #333;
 
