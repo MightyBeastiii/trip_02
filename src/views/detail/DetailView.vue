@@ -8,6 +8,8 @@ import DetailFacility from './canps/detail_03-facility.vue'
 import DetailLandlord from './canps/detail_04-landlord.vue'
 import DetailComment from './canps/detail_05-comment.vue'
 import DetailRules from './canps/detail_06-rules.vue'
+import DetailMap from './canps/detail_07-map.vue'
+import DetailIntro from './canps/detail_08-intro.vue'
 
 
 const route = useRoute()
@@ -33,6 +35,16 @@ const onClickLeft = () => {
       <detail-landlord :landlord-infos="mainPart.dynamicModule.landlordModule"></detail-landlord>
       <detail-comment :comments-data="mainPart.dynamicModule.commentModule"></detail-comment>
       <detail-rules :rules-module="mainPart.dynamicModule.rulesModule"></detail-rules>
+      <detail-map></detail-map>
+      <detail-intro :intro="mainPart.introductionModule"></detail-intro>
+    </div>
+    <div class="footer">
+      <div class="img">
+        <img src="@/assets/img/detail/icon_ensure.png" alt="">
+      </div>
+      <div class="text">
+        佳鑫旅途,永无止境!
+      </div>
     </div>
   </div>
 </template>
@@ -41,5 +53,23 @@ const onClickLeft = () => {
   .detail {
     --van-nav-bar-height: 44px;
     --van-nav-bar-title-text-color: var(--primary-color)
+    
   }
+    .footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+  
+      img {
+        width: 123px;
+      }
+  
+      .text {
+        margin-top: 12px;
+        font-size: 12px;
+        color: #7688a7;
+      }
+    }
 </style>

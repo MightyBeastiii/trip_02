@@ -1,20 +1,5 @@
-<template>
-  <div class="home">
-    <home-nav-bar></home-nav-bar>
-    <div class="banner">
-      <img src="@/assets/img/home/banner.webp" alt="">
-    </div>
-    <home-position></home-position>
-    <home-categrouies></home-categrouies>
-    <div class="search-bar" v-if="isSearchShow">
-      <home-search-bar></home-search-bar>
-    </div>
-    <home-hot-list></home-hot-list>
-  </div>
-</template>
-
 <script setup>
-import{watch,ref,computed} from 'vue'
+import { watch, ref, computed } from 'vue'
 //honeStore
 import useHomeStore from '@/stores/modules/home'
 //home组件
@@ -32,7 +17,7 @@ homeStore.fetchHotList()
 //监听屏幕滚动 到底部请求更多数据
 const { isReachBottom, scrollTop } = useScroll()
 watch(isReachBottom, (newValue) => {
-  if(newValue) {
+  if (newValue) {
     homeStore.fetchHotList().then(() => {
       isReachBottom.value = false
     })
@@ -44,6 +29,23 @@ const isSearchShow = computed(() => {
 })
 
 </script>
+
+<template>
+  <div class="home">
+    <home-nav-bar></home-nav-bar>
+    <div class="banner">
+      <img src="@/assets/img/home/banner.webp" alt="">
+    </div>
+    <home-position></home-position>
+    <home-categrouies></home-categrouies>
+    <div class="search-bar" v-if="isSearchShow">
+      <home-search-bar></home-search-bar>
+    </div>
+    <home-hot-list></home-hot-list>
+  </div>
+</template>
+
+
 
 <style lang="less" scoped>
 
