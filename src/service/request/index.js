@@ -1,8 +1,10 @@
 import axios from 'axios'
 
 import { BASE_URL, TIMEOUT } from './config'
+import { createPinia } from 'pinia'
 // import useMainStore from '@/stores/modules/main'
-// const mainStore = useMainStore()
+// const pinia = createPinia()
+// const mainStore = useMainStore(pinia)
 
 class JXRequest {
   constructor(baseURL, timeout=10000) {
@@ -17,9 +19,9 @@ class JXRequest {
     // }, err => {
     //   return err
     // })
-    // this.instance.interceptors.response.use(config => {
+    // this.instance.interceptors.response.use(res => {
     //   mainStore.isLoading = false
-    //   return config
+    //   return res
     // }, err => {
     //   mainStore.isLoading = false
     //   return err
